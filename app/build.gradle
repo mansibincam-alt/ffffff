@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mansibit.eshoarabi'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.mansibit.eshoarabi"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // সহজে ইনস্টল করার জন্য debug key দিয়ে সাইন করা হচ্ছে।
+            // Play Store এ দিতে চাইলে নিজের keystore বানিয়ে এখানে বসাবেন।
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidResources {
+        noCompress 'pdf'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+}

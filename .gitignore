@@ -1,0 +1,21 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+
+# Local secrets and build outputs
+.env
+.env.*
+!.env.example
+local.properties
+**/build/
+.gradle/
+*.jks
+*.keystore
